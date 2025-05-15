@@ -21,49 +21,48 @@ export default function MemberProfile({ member, onClose }) {
       </div>
 
       {/* Profile tabs */}
-      <div className="flex border-b mb-6">
-        <div
-          onClick={() => setActiveTab("profile")}
-          className={`px-4 py-2 font-medium cursor-pointer ${
-            activeTab === "profile" ? "border-b-2 border-blue-500" : "text-gray-500"
-          }`}
-        >
-          Profile
-        </div>
-        <div
-          onClick={() => setActiveTab("photos")}
-          className={`px-4 py-2 cursor-pointer ${
-            activeTab === "photos" ? "border-b-2 border-blue-500 font-medium" : "text-gray-500"
-          }`}
-        >
-          Photos{member.stats?.photos ? ` ${member.stats.photos}` : ""}
-        </div>
-        <div
-          onClick={() => setActiveTab("friends")}
-          className={`px-4 py-2 cursor-pointer ${
-            activeTab === "friends" ? "border-b-2 border-blue-500 font-medium" : "text-gray-500"
-          }`}
-        >
-          Friends{member.stats?.friends ? ` ${member.stats.friends}` : ""}
-        </div>
-        <div
-          onClick={() => setActiveTab("comments")}
-          className={`px-4 py-2 cursor-pointer ${
-            activeTab === "comments" ? "border-b-2 border-blue-500 font-medium" : "text-gray-500"
-          }`}
-        >
-          Comments{member.stats?.comments ? ` ${member.stats.comments}` : ""}
-        </div>
-        <div
-          onClick={() => setActiveTab("reviews")}
-          className={`px-4 py-2 cursor-pointer ${
-            activeTab === "reviews" ? "border-b-2 border-blue-500 font-medium" : "text-gray-500"
-          }`}
-        >
-          Reviews{member.stats?.reviews ? ` ${member.stats.reviews}` : ""}
-        </div>
-      </div>
-
+ <div className="flex border-b mb-6 overflow-x-auto scrollbar-hide">
+  <div
+    onClick={() => setActiveTab("profile")}
+    className={`px-4 py-2 font-medium cursor-pointer whitespace-nowrap ${
+      activeTab === "profile" ? "border-b-2 border-blue-500" : "text-gray-500"
+    }`}
+  >
+    Profile
+  </div>
+  <div
+    onClick={() => setActiveTab("photos")}
+    className={`px-4 py-2 cursor-pointer whitespace-nowrap ${
+      activeTab === "photos" ? "border-b-2 border-blue-500 font-medium" : "text-gray-500"
+    }`}
+  >
+    Photos{member.stats?.photos ? ` ${member.stats.photos}` : ""}
+  </div>
+  <div
+    onClick={() => setActiveTab("friends")}
+    className={`px-4 py-2 cursor-pointer whitespace-nowrap ${
+      activeTab === "friends" ? "border-b-2 border-blue-500 font-medium" : "text-gray-500"
+    }`}
+  >
+    Friends{member.stats?.friends ? ` ${member.stats.friends}` : ""}
+  </div>
+  <div
+    onClick={() => setActiveTab("comments")}
+    className={`px-4 py-2 cursor-pointer whitespace-nowrap ${
+      activeTab === "comments" ? "border-b-2 border-blue-500 font-medium" : "text-gray-500"
+    }`}
+  >
+    Comments{member.stats?.comments ? ` ${member.stats.comments}` : ""}
+  </div>
+  <div
+    onClick={() => setActiveTab("reviews")}
+    className={`px-4 py-2 cursor-pointer whitespace-nowrap ${
+      activeTab === "reviews" ? "border-b-2 border-blue-500 font-medium" : "text-gray-500"
+    }`}
+  >
+    Reviews{member.stats?.reviews ? ` ${member.stats.reviews}` : ""}
+  </div>
+</div>
 
       {/* Main profile content */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
