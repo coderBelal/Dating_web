@@ -1,5 +1,6 @@
 import Hero from "../components/Hero/Hero"
 import MembersGrid from "../components/Member/Member-Profile"
+import WhyChooseUs from "../components/WhyChooseUs/WhyChooseUs"
 
  
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
     <div>
       <Hero/>
       <MembersGrid/>
+      <WhyChooseUs/>
     </div>
   )
 }

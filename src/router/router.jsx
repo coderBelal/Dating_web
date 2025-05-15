@@ -3,6 +3,9 @@ import Main from "../layout/Main";
 import Home from "../Home/Home";
 import SearchResults from "../components/Result/Result";
 import ErrorPage from "../pages/Error";
+import LoginPage from "../pages/LoginPage";
+import RegisterPage from "../pages/RegisterPage";
+import ContactForm from "../pages/ContactPage";
  
 const router = createBrowserRouter([
   {
@@ -11,7 +14,10 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/results", element: <SearchResults /> },
-      { path: "*", element: <ErrorPage/>},  // catch-all route for 404
+      {path:"/login",element:<LoginPage/>},
+      {path:"/register",element:<RegisterPage/>},
+      {path:"/contact",element:<ContactForm/>},
+      { path: "*", element: <ErrorPage/>},   
     ],
   },
 ]);
